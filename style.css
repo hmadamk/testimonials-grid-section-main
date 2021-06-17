@@ -1,0 +1,91 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	margin:0;
+	padding:10px;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.grid{
+	display:grid;
+	height:100%;
+	grid:
+	"one one two five"
+	"three four four five";
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+	/* padding:100px; */
+	/* place-items:center; */
+}
+@media (max-width:700px){
+	.grid{
+		grid:
+		".one."
+		".one."
+		".two."
+		".three."
+		".four."
+		".four."
+		".five.";
+		".five.";
+		grid-template-columns:1fr
+		grid-template-rows: repeat(8, 1fr);
+	}
+}
+.grid > div{
+	border-radius:20px;
+	padding:10px;
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	box-shadow:4px 8px 1em #ddd;
+	padding:20px;
+}
+.one{
+	background:hsl(263, 55%, 52%);
+	color: #fff;
+	grid-area:one
+}
+.one,
+.two,
+.four{
+	color:#fff;
+}
+.info{
+	display:flex;
+}
+.info h3{
+	margin-left:10px;
+	margin-top:3px;
+	margin-bottom:0;
+}
+.big-txt{
+	font-size:1.8rem;
+	margin-bottom:1em;
+}
+.small-txt{
+	font-size:18px;
+	line-height:25px;
+}
+.info span{
+	font-size:15px;
+	color:#aaa;
+}
+.grid img {
+	border-radius:50%;
+}
+.two{
+	background:hsl(217, 19%, 35%);
+	grid-area:two
+}
+.three{
+	grid-area:three
+}
+.four{
+	background:hsl(219, 29%, 14%);
+	grid-area:four
+}
+.five{
+	grid-area:five
+}
