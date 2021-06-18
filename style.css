@@ -15,7 +15,7 @@ body{
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 20px;
-	/* padding:100px; */
+	padding:20px;
 	/* place-items:center; */
 }
 @media (max-width:700px){
@@ -23,15 +23,19 @@ body{
 		grid:
 		".one."
 		".one."
-		".two."
 		".three."
-		".four."
-		".four."
-		".five.";
-		".five.";
-		grid-template-columns:1fr
+		".two."
+		".five."
+		".five."
+		".four.";
+		".four.";
+		grid-template-columns:10px 1fr 10px
 		grid-template-rows: repeat(8, 1fr);
 	}
+	.two{background:#fff !important; color:#000!important;}
+	.three{background:hsl(217, 19%, 35%);color:#fff;}
+	.four{background:#fff !important; color:#000!important;}
+	.five{background:hsl(219, 29%, 14%); color:#fff;}
 }
 .grid > div{
 	border-radius:20px;
